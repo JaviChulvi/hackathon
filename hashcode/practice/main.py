@@ -18,7 +18,7 @@ def write_output(input_file, n_types_pizza, max_sublist):
     sublist = ''
     for i in max_sublist:
         sublist += str(i) + ' '
-    print(sublist)
+    #print(sublist)
     f.write(sublist)
     f.close()
 
@@ -58,9 +58,9 @@ def order(max_slices, max_types_pizza, n_slices_pizza):
 if __name__ == '__main__':
     input_file = sys.argv[1]
     max_slices, n_types_pizza, n_slices_pizza = read_input(input_file)
-    print('MAX SLICES: ',max_slices,'MAX TYPES PIZZAS: ', n_types_pizza)
+    #print('MAX SLICES: ',max_slices,'MAX TYPES PIZZAS: ', n_types_pizza)
     max_sum, max_n_types_pizza, max_sublist = order(max_slices, n_types_pizza, n_slices_pizza)
-    print('MAX SUM SLICES: ', max_sum, 'TYPES OF PIZZA USED: ',max_n_types_pizza)
+    #print('MAX SUM SLICES: ', max_sum, 'TYPES OF PIZZA USED: ',max_n_types_pizza)
     max_sublist.sort()
     write_output(input_file, max_n_types_pizza, max_sublist)
 
